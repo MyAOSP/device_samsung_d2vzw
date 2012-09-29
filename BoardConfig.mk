@@ -30,7 +30,8 @@
 TARGET_OTA_ASSERT_DEVICE := d2vzw
 
 # Kernel
-TARGET_KERNEL_CONFIG           := cyanogen_d2vzw_defconfig
+TARGET_KERNEL_CONFIG        := cyanogen_d2vzw_defconfig
 
-# Boot Animation
-TARGET_BOOTANIMATION_USE_RGB565 := true
+ifeq ($(USE_KEXEC),1)
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/samsung/d2vzw/kexec-releasetools/ota_from_target_files
+endif
