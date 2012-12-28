@@ -28,5 +28,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Inherit from d2-common
 $(call inherit-product, device/samsung/d2-common/d2-common.mk)
-
-$(call inherit-product-if-exists, vendor/samsung/d2vzw/d2vzw-vendor.mk)
